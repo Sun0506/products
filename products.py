@@ -9,3 +9,7 @@ print(products)
 
 for p in products:
 	print(p[0], '的價格是', p[1])
+
+with open('products.csv', 'w') as file:
+	for p in products:
+		file.write(p[0] + ',' + p[1] + '\n')
